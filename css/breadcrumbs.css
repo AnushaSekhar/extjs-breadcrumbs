@@ -1,0 +1,21 @@
+.x-bread-crumb-box {
+    padding: 0;
+}
+
+.x-bread-crumb {
+    border-style: none;
+    border-right: 1px solid;
+
+    border-radius: 0px;
+
+    border-top-right-radius: 10px 50%;
+    border-bottom-right-radius: 10px 50%;
+
+    padding-right: 5px;
+    padding-left: 10px;
+    margin-left: -10px;
+}
+
+.x-bread-crumb:first-child {
+    padding-left: 15px;
+}

@@ -1,0 +1,17 @@
+/**
+ * FIXME .x-toolbar-scroll-left .x-toolbar-scroll-right classes
+ * in ExtJS 4.2.1 point to invalid scroll-left.gif, scroll-right.gif
+ * from 'default' (blue) theme. Replace those by correct (gray) images
+ */
+.x-toolbar-scroll-left {
+    background-image: url(../images/breadcrumbs/scroll-left-gray.png) !important;
+}
+
+.x-toolbar-scroll-right {
+    background-image: url(../images/breadcrumbs/scroll-right-gray.png) !important;
+}
+
+.x-bread-crumb {
+    border-color: gray;
+    background-color: rgb(234, 234, 234);
+}
