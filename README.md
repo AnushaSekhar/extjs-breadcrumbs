@@ -6,8 +6,9 @@ This is simple and extensible imlementation of BreadCrumbs navigator for ExtJS 4
 
 Note
 ====
-This is not yet compatible with IE8. But who knows, maybe a miracle will happen :)
 
+Blue (default) and Gray themes are supported.
+This is not yet compatible with IE8. But who knows, maybe a miracle will happen :)
 
 Author
 ======
