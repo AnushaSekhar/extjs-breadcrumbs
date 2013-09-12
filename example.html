@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title id="title">ExtJS Breadcrumbs Example</title>
+
+    <!-- Default blue theme -->
+    <link rel="stylesheet" href="extjs/resources/css/ext-all.css">
+    <!-- <link rel="stylesheet" href="extjs/resources/css/ext-all-gray.css"> -->
+
+    <link rel="stylesheet" href="css/breadcrumbs.css"> <!-- Required for all themes -->
+    <!-- <link rel="stylesheet" href="css/breadcrumbs-gray.css"> -->
+
+    <script type="text/javascript" src="extjs/ext-all.js"></script>
+    <script type="text/javascript" src="toolbar/BreadCrumbs.js"></script>
+
+    <script type="text/javascript">
+        Ext.onReady(function () {
+            Ext.create('Ext.panel.Panel', {
+                title: 'ExtJS Breadcrumbs',
+                renderTo: Ext.getBody(),
+
+                dockedItems: [
+                    {
+                        xtype: 'breadcrumbs',
+                        items: [
+                            { text: "Home Page" },
+                            { text: "Subpage" }
+                        ]
+                    }
+                ],
+
+                items: [
+                    {
+                        xtype: 'button',
+                        text: 'Set Breadcrumbs',
+                        handler: function (button) {
+                            var breadcrumbs = button.up('panel').down('breadcrumbs');
+                            var crumbsText = prompt('Please input text for breadcrumbs. Separate with commas');
+
+                            if (crumbsText) {
+                                var crumbs = crumbsText.split(/,/).map(function (text) {
+                                    return { text: text };
+                                });
+
+                                breadcrumbs.set(crumbs);
+                            }
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

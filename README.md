@@ -3,6 +3,11 @@ extjs-breadcrumbs
 
 This is simple and extensible imlementation of BreadCrumbs navigator for ExtJS 4
 
+Example
+=======
+
+For working exaple see example.html (you should provide ExtJS 4 sources under extjs/ folder)
+
 
 Note
 ====
