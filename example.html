@@ -20,6 +20,7 @@
             Ext.create('Ext.panel.Panel', {
                 title: 'ExtJS Breadcrumbs',
                 renderTo: Ext.getBody(),
+                layout: 'vbox',
 
                 dockedItems: [
                     {
@@ -27,7 +28,14 @@
                         items: [
                             { text: "Home Page" },
                             { text: "Subpage" }
-                        ]
+                        ],
+                        listeners: {
+                            // This event is fired when a crumb gets a click
+                            crumbclick: function (crumb) {
+                                var statusBox = crumb.up('panel').down('text');
+                                statusBox.setText("Crumb with text '" + crumb.getText() + "' clicked!");
+                            }
+                        }
                     }
                 ],
 
@@ -46,7 +54,15 @@
 
                                 breadcrumbs.set(crumbs);
                             }
+
+                            // Trailing crumbs will be removed automatically,
+                            // unless you redefine 'click' listener for each crumb
+                            // To remove trailing crumbs manually just call:
+                            // crumb.removeTrail();
                         }
+                    }, {
+                        xtype: 'text',
+                        disabled: true
                     }
                 ]
             });
